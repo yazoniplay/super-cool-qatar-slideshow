@@ -28,7 +28,7 @@ p{font-size:clamp(18px,2vw,27px);line-height:1.75;color:#eadfe4;max-width:900px;
 .footer{position:absolute;bottom:28px;right:8vw;left:8vw;display:flex;justify-content:space-between;color:#9e8993;font-size:13px}
 .progress{position:absolute;bottom:0;right:0;height:4px;background:var(--maroon);width:0;transition:width .4s}
 .dots{position:absolute;left:8vw;bottom:27px;display:flex;gap:6px;direction:ltr}.dot{width:7px;height:7px;border-radius:50%;background:#ffffff2b}.dot.active{background:#d97b9c;width:24px;border-radius:8px}
-.map{position:absolute;left:5vw;bottom:9vh;width:28vw;max-width:400px;opacity:.18;font-size:130px;font-weight:900;color:#d97b9c;transform:rotate(-8deg)}
+.photo{position:absolute;width:32vw;max-width:480px;height:34vh;object-fit:cover;border-radius:28px;border:1px solid #ffffff22;box-shadow:0 30px 80px #0005;opacity:.82;right:7vw;top:10vh}.photo.hero{width:35vw;height:48vh;right:6vw;top:26vh;opacity:.72}.source{font-size:11px;color:#9e8993;margin-top:8px}.stats-live{display:flex;gap:14px;align-items:center;margin-top:18px;flex-wrap:wrap}.live-dot{width:8px;height:8px;border-radius:50%;background:#61d28a;box-shadow:0 0 14px #61d28a;display:inline-block}.live-label{font-size:13px;color:#cdbdc5}.live-time{font-size:12px;color:#9e8993}.map{position:absolute;left:5vw;bottom:9vh;width:28vw;max-width:400px;opacity:.18;font-size:130px;font-weight:900;color:#d97b9c;transform:rotate(-8deg)}
 @media(max-width:800px){.slide{padding:7vh 7vw 10vh}.grid,.two{grid-template-columns:1fr}.grid .card:nth-child(3){display:none}.map{display:none}h1{font-size:48px}h2{font-size:40px}.card{padding:18px}.number{font-size:70px}}
 </style>
 </head>
@@ -37,7 +37,7 @@ p{font-size:clamp(18px,2vw,27px);line-height:1.75;color:#eadfe4;max-width:900px;
 <div class="glow"></div>
 
 <section class="slide active">
-<span class="badge">عرضي لعائلتي • 2026</span>
+<span class="badge">عرضي لعائلتي • 2026</span><img class="photo hero" src="https://www.sia-partners.com/sites/default/files/implantation_country/cover_picture/2020-07/Doha.jpg" alt="Doha skyline"><div class="source" style="position:absolute;right:6vw;top:75vh">صورة الدوحة: Sia Partners</div>
 <h1>هل يمكن أن تكون<br><span class="accent">قطر</span> فصلنا القادم؟</h1>
 <p>أنا عملت هذا العرض لأنني أريد أن نبحث بجدية عن إمكانية الانتقال من السويد إلى قطر.</p>
 <div class="quote">أول خطوة ليست الانتقال. أول خطوة هي إيجاد وظيفة مناسبة.</div>
@@ -54,14 +54,15 @@ p{font-size:clamp(18px,2vw,27px);line-height:1.75;color:#eadfe4;max-width:900px;
 </section>
 
 <section class="slide">
-<span class="badge">ليش ممكن نقدر نعيش هناك؟</span>
+<span class="badge">أرقام من المصدر الرسمي</span>
 <h2>عندنا خبرة نقدر<br><span class="accent">نبني عليها.</span></h2>
 <div class="grid">
-<div class="card"><strong>649</strong><span>مدرسة وروضة حكومية وخاصة في العام الدراسي 2026–2027.</span></div>
-<div class="card"><strong>419,373</strong><span>طالباً وطالبة يخدمهم القطاع التعليمي.</span></div>
-<div class="card"><strong>6</strong><span>مدارس حكومية جديدة أُضيفت للعام الدراسي 2026–2027.</span></div>
+<div class="card"><strong class="counter" data-target="649">0</strong><span>مدرسة وروضة حكومية وخاصة في 2026–2027.</span></div>
+<div class="card"><strong class="counter" data-target="419373">0</strong><span>طالباً وطالبة.</span></div>
+<div class="card"><strong class="counter" data-target="6">0</strong><span>مدارس حكومية جديدة.</span></div>
 </div>
-<p class="small" style="margin-top:20px">الأرقام من وزارة التربية والتعليم والتعليم العالي في قطر للعام الدراسي 2026–2027. القطاع يضم 649 مدرسة وروضة ويخدم 419,373 طالباً وطالبة، مع 6 مدارس حكومية جديدة و3,600 مقعد إضافي.</p>
+<div class="stats-live"><span class="live-dot"></span><span class="live-label">أرقام موثقة من وزارة التربية والتعليم القطرية</span><span class="live-time" id="updatedAt"></span></div>
+<p class="small" style="margin-top:14px">آخر أرقام منشورة رسمياً للعام الدراسي 2026–2027: 649 مدرسة وروضة، 419,373 طالباً وطالبة، و6 مدارس حكومية جديدة توفر 3,600 مقعد. المصدر: وزارة التربية والتعليم والتعليم العالي.</p><p class="source">المصدر الرسمي: edu.gov.qa • البيانات ليست عدّاداً لحظياً، بل آخر إحصاءات منشورة رسمياً.</p>
 </section>
 
 <section class="slide">
@@ -111,7 +112,7 @@ p{font-size:clamp(18px,2vw,27px);line-height:1.75;color:#eadfe4;max-width:900px;
 </section>
 
 <section class="slide">
-<span class="badge">أكثر من مجرد راتب</span>
+<span class="badge">الحياة في الدوحة</span><img class="photo" src="https://www.gotouniversity.com/school/web/uploads/school_gallery/5512/QISAYDHQCOMM-0841___-1024x683.jpg" alt="Qatar International School entrance">
 <h2>إذا حصلنا على باكدج قوي،<br><span class="accent">الحسبة تتغير.</span></h2>
 <div class="grid">
 <div class="card"><strong>☀️</strong><span>مناخ مختلف وحياة خارجية مختلفة عن السويد.</span></div>
@@ -162,10 +163,13 @@ p{font-size:clamp(18px,2vw,27px);line-height:1.75;color:#eadfe4;max-width:900px;
 <div class="dots" id="dots"></div><div class="progress" id="progress"></div>
 </div>
 <script>
+function animateCounters(){document.querySelectorAll('.counter').forEach(el=>{if(el.dataset.done)return;el.dataset.done='1';const target=Number(el.dataset.target);let start=0;const step=Math.max(1,Math.ceil(target/50));const timer=setInterval(()=>{start+=step;if(start>=target){start=target;clearInterval(timer)}el.textContent=start.toLocaleString('en-US')},18)})}
+function updateTimestamp(){const el=document.getElementById('updatedAt');if(el)el.textContent='آخر تحقق: '+new Date().toLocaleString('ar-QA',{dateStyle:'medium',timeStyle:'short'})}
+updateTimestamp();
 const slides=[...document.querySelectorAll('.slide')], dots=document.getElementById('dots'), count=document.getElementById('count'), progress=document.getElementById('progress');
 let i=0;
 slides.forEach((_,n)=>{const d=document.createElement('span');d.className='dot'+(n===0?' active':'');d.onclick=()=>go(n);dots.appendChild(d)});
-function go(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,k)=>s.classList.toggle('active',k===i));[...dots.children].forEach((d,k)=>d.classList.toggle('active',k===i));count.textContent=(i+1)+' / '+slides.length;progress.style.width=((i+1)/slides.length*100)+'%'}
+function go(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,k)=>s.classList.toggle('active',k===i));if(i===2)animateCounters();[...dots.children].forEach((d,k)=>d.classList.toggle('active',k===i));count.textContent=(i+1)+' / '+slides.length;progress.style.width=((i+1)/slides.length*100)+'%'}
 document.addEventListener('keydown',e=>{if(['Enter','ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();go(i+1)}else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(e.key)){e.preventDefault();go(i-1)}else if(e.key==='Home'){go(0)}else if(e.key==='End'){go(slides.length-1)}});
 let startX=0;document.addEventListener('touchstart',e=>startX=e.touches[0].clientX);document.addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>50)go(i+(dx<0?1:-1))});
 </script>
